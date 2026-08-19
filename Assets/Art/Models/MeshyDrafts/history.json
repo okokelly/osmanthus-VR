@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "folder": "20260812_005650_summer-palace-dougong_019ff2d3",
+      "prompt": "summer-palace-dougong",
+      "task_type": "image-to-3d",
+      "root_task_id": "019ff2d3-7433-7182-8d9f-ba62ae848093",
+      "created_at": "2026-08-12T00:59:51.447928",
+      "updated_at": "2026-08-12T00:59:51.447962",
+      "task_count": 1
+    },
+    {
+      "folder": "20260812_005650_summer-palace-railing_019ff2d3",
+      "prompt": "summer-palace-railing",
+      "task_type": "image-to-3d",
+      "root_task_id": "019ff2d3-73d8-7abb-ab37-3f6c7a142d5a",
+      "created_at": "2026-08-12T00:59:51.449636",
+      "updated_at": "2026-08-12T00:59:51.449669",
+      "task_count": 1
+    },
+    {
+      "folder": "20260812_005650_summer-palace-roof-eave_019ff2d3",
+      "prompt": "summer-palace-roof-eave",
+      "task_type": "image-to-3d",
+      "root_task_id": "019ff2d3-7454-798c-a6bb-acf427261d77",
+      "created_at": "2026-08-12T00:59:51.453801",
+      "updated_at": "2026-08-12T00:59:51.453833",
+      "task_count": 1
+    }
+  ]
+}

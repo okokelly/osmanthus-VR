@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Osmanthus/Scenes/01_Courtyard.unity
     guid: ffea10903325848ef9640411a8240268
-  - enabled: 1
+  - enabled: 0
     path: Assets/Osmanthus/Scenes/02_Gallery.unity
     guid: 36a944c9e2b364d329f04b8095c4915b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Osmanthus/Scenes/03_Observatory.unity
     guid: 6abeeb15d28554fa688fcc2249fee4f8
+  - enabled: 1
+    path: Assets/Osmanthus/Scenes/04_CompleteCorridorLake.unity
+    guid: 279be6aff6cee40cfb63eb9a6060dd8f
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

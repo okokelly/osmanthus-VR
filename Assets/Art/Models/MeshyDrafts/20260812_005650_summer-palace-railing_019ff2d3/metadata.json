@@ -1,0 +1,19 @@
+{
+  "project_name": "summer-palace-railing",
+  "folder": "20260812_005650_summer-palace-railing_019ff2d3",
+  "root_task_id": "019ff2d3-73d8-7abb-ab37-3f6c7a142d5a",
+  "created_at": "2026-08-12T00:59:51.449636",
+  "updated_at": "2026-08-12T00:59:51.449669",
+  "tasks": [
+    {
+      "task_id": "019ff2d3-73d8-7abb-ab37-3f6c7a142d5a",
+      "task_type": "image-to-3d",
+      "stage": "complete",
+      "files": [
+        "ENV_Corridor_Railing_MeshyDraft_v1.fbx",
+        "thumbnail.png"
+      ],
+      "created_at": "2026-08-12T00:59:51.449667"
+    }
+  ]
+}

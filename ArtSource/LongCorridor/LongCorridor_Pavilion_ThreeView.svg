@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2000" height="1600" viewBox="0 0 2000 1600">
+  <defs>
+    <style>
+      .bg{fill:#151b1d}.panel{fill:#22292b;stroke:#4e5d5c;stroke-width:2}.gold{fill:#e2a94b}.main{fill:#f1eadc}.muted{fill:#aebbb7}
+      text{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}.title{font-size:42px;font-weight:700;letter-spacing:2px}
+      .subtitle{font-size:18px}.h2{font-size:25px;font-weight:700}.label{font-size:18px}.small{font-size:16px}.tiny{font-size:14px}
+    </style>
+    <clipPath id="clipLong"><rect x="50" y="160" width="1250" height="690" rx="14"/></clipPath>
+    <clipPath id="clipEnd"><rect x="1330" y="160" width="620" height="340" rx="14"/></clipPath>
+    <clipPath id="clipPlayer"><rect x="1330" y="530" width="620" height="340" rx="14"/></clipPath>
+    <clipPath id="clipTop"><rect x="50" y="900" width="1250" height="650" rx="14"/></clipPath>
+  </defs>
+  <rect class="bg" width="2000" height="1600"/>
+  <text class="title main" x="50" y="67">颐和园长廊 · 八角亭完整廊段</text>
+  <text class="subtitle muted" x="50" y="101">STYLIZED UNITY / BLENDER ASSET — 中央双檐八角亭 + 左右各 3 开间 · 1 Blender unit = 1 m</text>
+  <rect x="1642" y="40" width="308" height="68" rx="10" fill="#d4973d"/>
+  <text x="1796" y="68" text-anchor="middle" font-size="14" fill="#151b1d">TARGET</text>
+  <text x="1796" y="94" text-anchor="middle" font-size="19" font-weight="700" fill="#151b1d">Unity URP · Meta Quest</text>
+
+  <rect class="panel" x="50" y="160" width="1250" height="690" rx="14"/>
+  <image x="50" y="160" width="1250" height="703.125" xlink:href="renders/LongCorridor_Longitudinal.png" clip-path="url(#clipLong)" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="72" y="181" width="300" height="46" rx="7" fill="#151b1d" opacity="0.88"/>
+  <text class="h2 main" x="92" y="213">A · 沿廊轴侧立面</text>
+  <rect x="76" y="785" width="650" height="42" rx="7" fill="#151b1d" opacity="0.86"/>
+  <text class="label gold" x="96" y="813">总包络约 20.18 m · 6 个标准开间 · 中央八角亭</text>
+
+  <rect class="panel" x="1330" y="160" width="620" height="340" rx="14"/>
+  <image x="1330" y="160" width="620" height="348.75" xlink:href="renders/LongCorridor_Transverse.png" clip-path="url(#clipEnd)" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="1350" y="180" width="266" height="43" rx="7" fill="#151b1d" opacity="0.88"/>
+  <text class="h2 main" x="1368" y="210">B · 横向端立面</text>
+
+  <rect class="panel" x="1330" y="530" width="620" height="340" rx="14"/>
+  <image x="1330" y="530" width="620" height="348.75" xlink:href="renders/LongCorridor_PlayerView.png" clip-path="url(#clipPlayer)" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="1350" y="550" width="348" height="43" rx="7" fill="#151b1d" opacity="0.88"/>
+  <text class="h2 main" x="1368" y="580">验证 · 1.65 m 玩家眼高</text>
+
+  <rect class="panel" x="50" y="900" width="1250" height="650" rx="14"/>
+  <image x="50" y="874" width="1250" height="703.125" xlink:href="renders/LongCorridor_Top.png" clip-path="url(#clipTop)" preserveAspectRatio="xMidYMid slice"/>
+  <rect x="72" y="921" width="268" height="46" rx="7" fill="#151b1d" opacity="0.88"/>
+  <text class="h2 main" x="92" y="953">C · 顶视图 / 平面</text>
+  <rect x="76" y="1484" width="915" height="42" rx="7" fill="#151b1d" opacity="0.86"/>
+  <text class="label gold" x="96" y="1512">廊宽 2.28 m · 柱距 2.49 m · 亭体最大宽约 5.44 m · 亭高约 6.31 m</text>
+
+  <rect class="panel" x="1330" y="900" width="620" height="650" rx="14"/>
+  <text class="h2 main" x="1365" y="951">模型规格</text>
+  <text class="label gold" x="1365" y="997">体验距离</text>
+  <text class="small muted" x="1385" y="1030">• 玩家可在廊中穿行与 Teleport</text>
+  <text class="small muted" x="1385" y="1061">• 瓦片节奏、梁枋彩画、亭下斗拱可近看</text>
+  <text class="small muted" x="1385" y="1092">• 纹样保持抽象，不做文保级复原</text>
+  <text class="label gold" x="1365" y="1142">Unity 资产</text>
+  <text class="small muted" x="1385" y="1175">• 7,164 triangles · 10 materials</text>
+  <text class="small muted" x="1385" y="1206">• 三根交互柱单独命名</text>
+  <text class="small muted" x="1385" y="1237">• FBX：Y-up，1 unit = 1 m</text>
+  <text class="label gold" x="1365" y="1287">视觉语言</text>
+  <text class="small muted" x="1385" y="1320">低饱和青绿 · 暗朱红 · 冷雾蓝</text>
+  <text class="small muted" x="1385" y="1351">桂花金用于屋檐轮廓与记忆激活提示</text>
+  <text class="label gold" x="1365" y="1401">Quest 优化提示</text>
+  <text class="small muted" x="1385" y="1434">当前为可编辑拆件版；进入 Unity 后，</text>
+  <text class="small muted" x="1385" y="1465">保留 3 根交互柱独立，其余按材质合批。</text>
+  <rect x="1365" y="1493" width="550" height="33" rx="6" fill="#423626"/>
+  <text class="tiny gold" x="1640" y="1515" text-anchor="middle">概念建模资产 · 不可作为文物修缮或施工测绘依据</text>
+</svg>

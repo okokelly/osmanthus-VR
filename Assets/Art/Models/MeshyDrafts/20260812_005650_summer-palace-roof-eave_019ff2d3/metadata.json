@@ -1,0 +1,19 @@
+{
+  "project_name": "summer-palace-roof-eave",
+  "folder": "20260812_005650_summer-palace-roof-eave_019ff2d3",
+  "root_task_id": "019ff2d3-7454-798c-a6bb-acf427261d77",
+  "created_at": "2026-08-12T00:59:51.453801",
+  "updated_at": "2026-08-12T00:59:51.453833",
+  "tasks": [
+    {
+      "task_id": "019ff2d3-7454-798c-a6bb-acf427261d77",
+      "task_type": "image-to-3d",
+      "stage": "complete",
+      "files": [
+        "ENV_Corridor_RoofEave_MeshyDraft_v1.fbx",
+        "thumbnail.png"
+      ],
+      "created_at": "2026-08-12T00:59:51.453830"
+    }
+  ]
+}
