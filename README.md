@@ -63,19 +63,7 @@ Console **0 error**。以下都已完成并可通过菜单一键重建（见第�
 
 ---
 
-## 五、如何重建 / 菜单 (Editor Menus)
-
-所有搭建都是可复现的脚本，改完参数点菜单即可重建，**不要手动改生成出来的物体**（会被下次重建覆盖）：
-
-| 菜单 | 作用 | 脚本 |
-|---|---|---|
-| `Osmanthus/Setup/Add Meta Player Rig OVR` | 装 Meta 玩家 rig + 固定眼高 | `Editor/MetaPlayerRigSetup.cs` |
-| `Osmanthus/Setup/Build Player Boundaries` | 生成隐形边界墙 + 安全地面 | `Editor/BoundaryBuilder.cs` |
-| `Osmanthus/Scene 3/Build Quick 2.5D` | 生成/重建 Scene 3 弧形湖景 | `Editor/Scene3Quick2DBuilder.cs` |
-| `Osmanthus/Setup/Build Osmanthus + Replace Placeholders` | 生成桂花 prefab + 替换占位 | `Editor/OsmanthusBuilder.cs` |
-| `Osmanthus/Setup/Build Phase C Interaction` | 生成引导桂花 + 幕布 + 交互 | `Editor/PhaseCBuilder.cs` |
-
-> 重建顺序（如果要全部重来）：先 `Add Meta Player Rig OVR`，再 `Build Player Boundaries`、`Build Osmanthus`、`Build Quick 2.5D`，最后 `Build Phase C Interaction`（它依赖 rig）。
+## 五、如何修改
 
 关键可调参数（都是脚本里的常量/组件字段）：
 - 眼高：`MetaPlayerRigSetup.EyeHeight` 和 `FixedEyeHeight.eyeHeight`（当前 1.5m）。
@@ -87,7 +75,7 @@ Console **0 error**。以下都已完成并可通过菜单一键重建（见第�
 
 ## 六、Pending / TODO
 
-1. **走廊外景（业主自己晚上做）**：从走廊往外看的假山、树丛、桂花树等点缀。不影响主体故事线。
+1. **走廊外景**：从走廊往外看的假山、树丛、桂花树等点缀。不影响主体故事线。
 2. **眼高微调**：已修「视点跑到天花板高度」的 bug（原因是 Floor-level 追踪把真实头高叠加到了 rig 偏移上；现在强制 EyeLevel + 运行时锁定 1.5m）。真机上如仍偏高/偏低，改 `FixedEyeHeight.eyeHeight`。目标大约「柱子 2/3 高度」。
 3. **湖面背景边缘穿帮**：走到湖前面沉浸感 OK；离得远时以前会看到幕布边缘——已把弧形加宽到 240°、加高，边缘基本移出视野。若仍有穿帮，可继续加大 `angleSpan`（甚至做成接近 360° 的全景）。
 4. **边界墙**：已收紧安全地面到真实地面范围、补齐周界。**仍需真机走一遍确认没有漏的地方**；参数全在 `BoundaryBuilder.cs`。
