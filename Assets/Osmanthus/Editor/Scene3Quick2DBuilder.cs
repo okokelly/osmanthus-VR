@@ -68,14 +68,14 @@ public static class Scene3Quick2DBuilder
         Vector3 arcCenter = new Vector3(-9.2f, 0f, 20f);
 
         // Far city: far enough for depth (radius 180) but present enough to read as a hybrid skyline.
-        CreateArcCard("Far City + Garden Backdrop", root.transform, arcCenter, 180f, -8f, 150f, 180f, 110f, 64, farMaterial, 0);
+        CreateArcCard("Far City + Garden Backdrop", root.transform, arcCenter, 180f, -12f, 185f, 180f, 240f, 110, farMaterial, 0);
 
         // Atmospheric depth fog bands between far and mid (thin, so they blend rather than separate).
-        CreateArcCard("Depth Fog - Far Band", root.transform, arcCenter, 130f, -4f, 105f, 180f, 106f, 52, depthFogFar, 1);
-        CreateArcCard("Depth Fog - Near Band", root.transform, arcCenter, 90f, -2f, 74f, 180f, 98f, 44, depthFogNear, 2);
+        CreateArcCard("Depth Fog - Far Band", root.transform, arcCenter, 130f, -6f, 120f, 180f, 230f, 100, depthFogFar, 1);
+        CreateArcCard("Depth Fog - Near Band", root.transform, arcCenter, 90f, -3f, 82f, 180f, 190f, 80, depthFogNear, 2);
 
         // Mid garden islands, kept near their original distance so they stay the same apparent size.
-        CreateArcCard("Mid Garden Islands Cutout", root.transform, arcCenter, 46f, -2f, 42f, 180f, 88f, 44, midMaterial, 3);
+        CreateArcCard("Mid Garden Islands Cutout", root.transform, arcCenter, 46f, -3f, 44f, 180f, 150f, 72, midMaterial, 3);
 
         // --- Waterline haze: dissolves the hard bottom edge of the mid cutout into the lake ---
         CreateCard("Waterline Haze", root.transform, new Vector3(-46f, 1.8f, 20f), new Vector2(160f, 14f), waterlineHaze, 4);

@@ -74,7 +74,7 @@ public static class MetaPlayerRigSetup
                   ", replaced XRI rig, demoted " + demoted + " camera(s). Set tracking origin to Floor.");
     }
 
-    private const float EyeHeight = 1.6f;
+    private const float EyeHeight = 1.5f;
 
     private static void ConfigureFixedEyeHeight(GameObject rig)
     {
@@ -100,7 +100,15 @@ public static class MetaPlayerRigSetup
             Vector3 p = camRig.localPosition;
             camRig.localPosition = new Vector3(p.x, EyeHeight, p.z);
         }
-        Debug.Log("[Osmanthus] Fixed eye height set to " + EyeHeight + "m (EyeLevel tracking, profile data off).");
+
+        // Runtime enforcer: forces Eye-level tracking + holds the rig height every frame, so the
+        // viewpoint can't end up doubled to ceiling height on device.
+        FixedEyeHeight feh = rig.GetComponent<FixedEyeHeight>();
+        if (feh == null) feh = rig.AddComponent<FixedEyeHeight>();
+        feh.eyeHeight = EyeHeight;
+        feh.cameraRig = camRig;
+
+        Debug.Log("[Osmanthus] Fixed eye height set to " + EyeHeight + "m (EyeLevel tracking, runtime-enforced).");
     }
 
     private static object ParseEnumMember(Component c, string member, string valueName)
