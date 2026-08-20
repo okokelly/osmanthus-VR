@@ -9,13 +9,13 @@ using UnityEngine.Video;
 public class VideoScreen : MonoBehaviour
 {
     [Header("Layout (metres)")]
-    public float distance = 2.2f;
-    public float width = 2.8f;
-    public float height = 1.6f;
+    public float distance = 3.2f;   // in front of the head
+    public float width = 4.4f;      // cinema-sized
+    public float height = 2.5f;
 
     [Header("Timing")]
     public float unfoldTime = 1.1f;
-    public float dimAlpha = 0.82f;
+    public float dimAlpha = 1.0f;   // fully black surroundings
     public float placeholderSeconds = 8f;
 
     public System.Action onClosed;
@@ -42,8 +42,8 @@ public class VideoScreen : MonoBehaviour
         dim.name = "DimOverlay";
         StripCollider(dim);
         dim.transform.SetParent(transform, false);
-        dim.transform.localPosition = new Vector3(0f, 0f, 0.2f);
-        dim.transform.localScale = new Vector3(80f, 50f, 1f);
+        dim.transform.localPosition = new Vector3(0f, 0f, 0.25f);
+        dim.transform.localScale = new Vector3(200f, 120f, 1f);
         _dimMat = MakeUnlit(new Color(0.02f, 0.02f, 0.03f, 0f), true);
         _dimRenderer = dim.GetComponent<Renderer>();
         _dimRenderer.sharedMaterial = _dimMat;
@@ -100,13 +100,14 @@ public class VideoScreen : MonoBehaviour
         if (_busy) return;
         gameObject.SetActive(true);
 
-        Vector3 fwd = viewer != null ? viewer.forward : Vector3.forward;
-        Vector3 pos = viewer != null ? viewer.position : transform.position;
-        fwd.y = 0f;
-        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
-        fwd.Normalize();
-        transform.position = pos + fwd * distance + Vector3.up * 0f;
-        transform.rotation = Quaternion.LookRotation(fwd, Vector3.up);
+        // Head-lock the screen to the viewer so it's always a big screen straight ahead, regardless
+        // of eye height or where the player is looking (a cinema screen on a black surround).
+        if (viewer != null)
+        {
+            transform.SetParent(viewer, false);
+            transform.localPosition = new Vector3(0f, 0f, distance);
+            transform.localRotation = Quaternion.identity;
+        }
 
         _pendingLabel = string.IsNullOrEmpty(label) ? "VIDEO" : label;
         if (_label != null) _label.text = _pendingLabel;

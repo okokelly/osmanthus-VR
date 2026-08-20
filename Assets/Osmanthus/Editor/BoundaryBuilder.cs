@@ -42,8 +42,11 @@ public static class BoundaryBuilder
     // (name, centerX, centerZ, sizeX, sizeZ) — 1 m thick catch floors, top just below the real floor.
     private static readonly (string, float, float, float, float)[] SafetyFloors =
     {
+        // Tight to the real floor pieces so there is no invisible ground over walled-off voids.
         ("SafetyFloor_Corridor", 0.0f, -5.5f, 4.0f, 52.5f),
-        ("SafetyFloor_LakeZone", -12.0f, 20.0f, 26.0f, 11.0f),
+        ("SafetyFloor_Turn", -5.5f, 20.0f, 11.0f, 3.6f),
+        ("SafetyFloor_Terrace", -14.3f, 20.0f, 9.0f, 8.4f),
+        ("SafetyFloor_Jetty", -21.1f, 20.0f, 5.2f, 2.8f),
     };
 
     [MenuItem("Osmanthus/Setup/Build Player Boundaries")]
