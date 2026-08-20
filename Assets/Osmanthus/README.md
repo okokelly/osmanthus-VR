@@ -62,19 +62,7 @@ Console **0 error**。以下都已完成并可通过菜单一键重建（见第�
 
 ---
 
-## 五、如何重建 / 菜单 (Editor Menus)
-
-所有搭建都是可复现的脚本，改完参数点菜单即可重建，**不要手动改生成出来的物体**（会被下次重建覆盖）：
-
-| 菜单 | 作用 | 脚本 |
-|---|---|---|
-| `Osmanthus/Setup/Add Meta Player Rig OVR` | 装 Meta 玩家 rig + 固定眼高 | `Editor/MetaPlayerRigSetup.cs` |
-| `Osmanthus/Setup/Build Player Boundaries` | 生成隐形边界墙 + 安全地面 | `Editor/BoundaryBuilder.cs` |
-| `Osmanthus/Scene 3/Build Quick 2.5D` | 生成/重建 Scene 3 弧形湖景 | `Editor/Scene3Quick2DBuilder.cs` |
-| `Osmanthus/Setup/Build Osmanthus + Replace Placeholders` | 生成桂花 prefab + 替换占位 | `Editor/OsmanthusBuilder.cs` |
-| `Osmanthus/Setup/Build Phase C Interaction` | 生成引导桂花 + 幕布 + 交互 | `Editor/PhaseCBuilder.cs` |
-
-> 重建顺序（如果要全部重来）：先 `Add Meta Player Rig OVR`，再 `Build Player Boundaries`、`Build Osmanthus`、`Build Quick 2.5D`，最后 `Build Phase C Interaction`（它依赖 rig）。
+## 五、如何修改
 
 关键可调参数（都是脚本里的常量/组件字段）：
 - 眼高：`MetaPlayerRigSetup.EyeHeight` 和 `FixedEyeHeight.eyeHeight`（当前 1.5m）。
