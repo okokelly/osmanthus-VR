@@ -22,8 +22,7 @@ Assets/Osmanthus/Scenes/04_CompleteCorridorLake.unity
 2. 打开 **Unity Hub**，安装 Unity 版本 **`6000.5.7f1`**（必须完全一致，含 **Android Build Support** 模块：Android SDK/NDK + OpenJDK）。
 3. Unity Hub → *Add* → 选择这个项目根目录打开。首次打开会 import，比较久。
 4. 打开场景：`Assets/Osmanthus/Scenes/04_CompleteCorridorLake.unity`。
-5. **Build 到 Meta Quest 3**：Quest 3 本质是一台 Android 设备，所以「build 给 Quest」在 Unity 里 = **目标平台选 Android**（`File → Build Settings` → 选 `Android` → `Switch Platform`）。产物是一个 APK，直接装进 Quest 头显运行——项目里已有的 `demo1.apk / demo2.apk` 就是这么来的。确保场景列表里勾的是 `04`，USB 连上 Quest 3（头显里开启开发者模式 / USB 调试）后点 `Build And Run`。
-   - XR 运行时用 **OpenXR + Meta Quest** feature（项目已配置好，不用改）。
+5. **Build 到 Meta Quest 3**：USB 连上 Quest 3，`File → Build Settings` → `Build And Run`（场景勾 `04`）。
 6. 编辑器里想「走一走」：需要 Quest Link 或 XR 模拟器进 Play 模式。**注意：Unity 编辑器窗口在后台不聚焦时，Play 模式会被降速，动画会变慢——聚焦窗口或直接真机就正常。**
 
 ---
