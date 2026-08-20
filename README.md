@@ -1,6 +1,7 @@
 # Osmanthus VR — 项目说明 / README
 
 一个约 4 分钟、运行在 **Meta Quest 3** 上的独立 VR 体验：跟随飘浮的桂花穿过颐和园长廊，触摸桂花展开两段视频，最后走到湖边看到「现代都市 × 园林」融合的重构景象。
+demo apk: https://drive.google.com/file/d/1w0NJ-LmFVACYVS74QvLoZ5JhCP91i4tn/view?usp=share_link
 
 ---
 
