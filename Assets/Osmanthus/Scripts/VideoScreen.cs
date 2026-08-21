@@ -20,6 +20,11 @@ public class VideoScreen : MonoBehaviour
 
     public System.Action onClosed;
 
+    // Overlay queue: dim first, then the panel, then the placeholder label over both.
+    private const int DimQueue = 4000;
+    private const int PanelQueue = 4001;
+    private const int LabelQueue = 4002;
+
     private Transform _panel;
     private Renderer _dimRenderer;
     private Material _panelMat, _dimMat;
@@ -44,7 +49,7 @@ public class VideoScreen : MonoBehaviour
         dim.transform.SetParent(transform, false);
         dim.transform.localPosition = new Vector3(0f, 0f, 0.25f);
         dim.transform.localScale = new Vector3(200f, 120f, 1f);
-        _dimMat = MakeUnlit(new Color(0.02f, 0.02f, 0.03f, 0f), true);
+        _dimMat = MakeUnlit(new Color(0.02f, 0.02f, 0.03f, 0f), DimQueue);
         _dimRenderer = dim.GetComponent<Renderer>();
         _dimRenderer.sharedMaterial = _dimMat;
 
@@ -56,7 +61,7 @@ public class VideoScreen : MonoBehaviour
         panel.transform.localPosition = Vector3.zero;
         panel.transform.localScale = new Vector3(width, height, 1f);
         _panel = panel.transform;
-        _panelMat = MakeUnlit(new Color(0.42f, 0.42f, 0.46f, 1f), false);
+        _panelMat = MakeUnlit(new Color(0.42f, 0.42f, 0.46f, 1f), PanelQueue);
         panel.GetComponent<Renderer>().sharedMaterial = _panelMat;
 
         // Optional placeholder label via TMP with a runtime OS font. Guarded so a missing font never
@@ -75,6 +80,14 @@ public class VideoScreen : MonoBehaviour
             _label.fontSize = 4f;
             _label.color = new Color(1f, 0.94f, 0.78f, 1f);
             _label.rectTransform.sizeDelta = new Vector2(width, height);
+            // Match the panel: over the world, and above the panel it sits on.
+            Material lm = _label.fontMaterial;
+            if (lm != null)
+            {
+                if (lm.HasProperty("_ZTestMode"))
+                    lm.SetFloat("_ZTestMode", (float)UnityEngine.Rendering.CompareFunction.Always);
+                lm.renderQueue = LabelQueue;
+            }
         }
     }
 
@@ -126,6 +139,7 @@ public class VideoScreen : MonoBehaviour
             ? new Color(0.34f, 0.48f, 0.72f, 1f)   // cool = video 2
             : new Color(0.72f, 0.52f, 0.30f, 1f);  // warm = video 1
         _panelMat.SetColor("_BaseColor", tint);
+        if (_panelMat.HasProperty("_UseTexture")) _panelMat.SetFloat("_UseTexture", 0f);
         if (_panelMat.HasProperty("_BaseMap")) _panelMat.SetTexture("_BaseMap", null);
         if (_label != null) _label.gameObject.SetActive(true);
     }
@@ -150,6 +164,7 @@ public class VideoScreen : MonoBehaviour
         _player.clip = clip;
         _panelMat.SetColor("_BaseColor", Color.white);
         if (_panelMat.HasProperty("_BaseMap")) _panelMat.SetTexture("_BaseMap", _rt);
+        if (_panelMat.HasProperty("_UseTexture")) _panelMat.SetFloat("_UseTexture", 1f);
     }
 
     private IEnumerator Run(VideoClip clip)
@@ -213,22 +228,28 @@ public class VideoScreen : MonoBehaviour
         if (col != null) Object.DestroyImmediate(col);
     }
 
-    private static Material MakeUnlit(Color color, bool transparent)
+    // The takeover surfaces ignore depth entirely (see S_VideoScreenOverlay). A cinema-sized panel
+    // cannot fit inside the corridor -- the clear span between the pillars is about 2 m and the
+    // lattice tops are at y 2.28 -- so depth-testing it just means pillars and roof slice into the
+    // picture. `queue` orders the dim behind the panel.
+    private static Material MakeUnlit(Color color, int queue)
     {
-        Shader sh = Shader.Find("Universal Render Pipeline/Unlit");
+        Shader sh = Shader.Find("Osmanthus/VideoScreenOverlay");
+        if (sh == null) sh = Shader.Find("Universal Render Pipeline/Unlit");
         if (sh == null) sh = Shader.Find("Unlit/Color");
         Material m = new Material(sh);
         if (m.HasProperty("_BaseColor")) m.SetColor("_BaseColor", color);
         if (m.HasProperty("_Color")) m.SetColor("_Color", color);
-        if (transparent)
-        {
-            if (m.HasProperty("_Surface")) m.SetFloat("_Surface", 1f);
-            if (m.HasProperty("_SrcBlend")) m.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            if (m.HasProperty("_DstBlend")) m.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            if (m.HasProperty("_ZWrite")) m.SetFloat("_ZWrite", 0f);
-            m.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
-            m.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
-        }
+        if (m.HasProperty("_UseTexture")) m.SetFloat("_UseTexture", 0f);
+
+        // Fallback path only: the overlay shader already blends, ignores depth and sits in Overlay.
+        if (m.HasProperty("_Surface")) m.SetFloat("_Surface", 1f);
+        if (m.HasProperty("_SrcBlend")) m.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+        if (m.HasProperty("_DstBlend")) m.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+        if (m.HasProperty("_ZWrite")) m.SetFloat("_ZWrite", 0f);
+        if (m.HasProperty("_ZTest")) m.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always);
+        m.EnableKeyword("_SURFACE_TYPE_TRANSPARENT");
+        m.renderQueue = queue;
         return m;
     }
 }

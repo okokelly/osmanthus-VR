@@ -25,17 +25,27 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _GradBack: -52
-    - _GradFront: -6
-    - _ReflectStrength: 0.12
-    - _RippleScale: 2.2
-    - _RippleSpeed: 0.4
-    - _RippleStrength: 0.025
+    - _CamFadeEnd: 52
+    - _CamFadeStart: 16
+    - _DetailScale: 3.5
+    - _DetailStrength: 0.05
+    - _GlitterScale: 0.8
+    - _GlitterStrength: 0.09
+    - _GradBack: -62
+    - _GradFront: -19
+    - _HazeStart: 0.62
+    - _ReflectStrength: 0.15
+    - _ReflectWidth: 10
+    - _RippleFalloff: 2.4
+    - _RippleScale: 1.3
+    - _RippleSpeed: 0.45
+    - _RippleStrength: 0.05
     m_Colors:
-    - _FarColor: {r: 0.52, g: 0.57, b: 0.57, a: 1}
-    - _HorizonColor: {r: 0.8, g: 0.72, b: 0.58, a: 1}
-    - _NearColor: {r: 0.3, g: 0.37, b: 0.39, a: 1}
-    - _ReflectColor: {r: 0.85, g: 0.62, b: 0.42, a: 1}
-    - _RippleColor: {r: 0.86, g: 0.9, b: 0.95, a: 1}
+    - _FarColor: {r: 0.3, g: 0.33, b: 0.33, a: 1}
+    - _HazeColor: {r: 0.33, g: 0.34, b: 0.32, a: 0.9}
+    - _HorizonColor: {r: 0.4, g: 0.4, b: 0.37, a: 1}
+    - _NearColor: {r: 0.19, g: 0.25, b: 0.28, a: 1}
+    - _ReflectColor: {r: 0.8, g: 0.66, b: 0.48, a: 1}
+    - _RippleColor: {r: 0.84, g: 0.89, b: 0.95, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
