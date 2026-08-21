@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Corridor_Paving
+  m_Shader: {fileID: 4800000, guid: 7618cd73358394b7ba5210bc3f3b00b5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _DetailFade: 26
+    - _GrainScale: 14
+    - _GrainStrength: 0.1
+    - _GroutWidth: 0.035
+    - _RunningBond: 1
+    - _SlabVariation: 0.55
+    - _SlabX: 0.6
+    - _SlabZ: 0.9
+    - _WearStrength: 0.16
+    m_Colors:
+    - _GroutColor: {r: 0.24, g: 0.23, b: 0.21, a: 1}
+    - _StoneA: {r: 0.42, g: 0.4, b: 0.36, a: 1}
+    - _StoneB: {r: 0.58, g: 0.55, b: 0.49, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
