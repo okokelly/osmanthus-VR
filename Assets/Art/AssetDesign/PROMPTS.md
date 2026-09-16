@@ -183,3 +183,129 @@ Final output and four Meshy crops:
 - `MeshyMultiView/ENV_Corridor_CanopyBay_A/MV_CanopyBay_A_02_right_side.png`
 - `MeshyMultiView/ENV_Corridor_CanopyBay_A/MV_CanopyBay_A_03_rear.png`
 - `MeshyMultiView/ENV_Corridor_CanopyBay_A/MV_CanopyBay_A_04_underside_3q.png`
+
+## Scene 04 · Garden Meshy Sources
+
+These first-pass source images were generated as isolated three-quarter views for Meshy Image-to-3D. The light neutral background, complete silhouettes, visible side thickness, and restrained contact shadows are intentional reconstruction aids.
+
+### Scene Asset 01 — Osmanthus Tree
+
+Output: `MeshySources/01_Osmanthus_Tree.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: one isolated stylized Osmanthus fragrans tree, game-ready garden asset for Unity 6 URP on Meta Quest 3.
+Subject: a short multi-stem trunk splitting into three main stems about one metre above the ground; warm grey-brown bark with fine vertical fissures; dense evergreen crown shaped as a broad rounded oval, slightly wider than tall; crown constructed from eight to twelve clearly separated sculpted foliage clumps with faceted surfaces and real thickness, never flat cards. Leaves are small, leathery, lanceolate, dark blue-green with a muted jade cast. Only a sparse gold shimmer: tiny four-lobed apricot-gold osmanthus flowers tucked inside leaf axils, never a blossom-covered canopy.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single tree in slight three-quarter view, whole tree visible from flat base to crown, generous empty margin, upright and symmetrical enough for reconstruction while retaining organic variation.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: soft neutral studio lighting, clear silhouette, very subtle contact shadow only.
+Materials/textures: matte bark and matte sculpted foliage volumes.
+Constraints: exactly one complete tree; closed readable silhouette; flat underside; origin conceptually at base; no terrain, pot, rocks, grass, people, labels, dimensions, logo, text, or watermark.
+Avoid: cherry blossom, sakura, plumeria, magnolia, dense flowers, pink flowers, blossom pom-poms, alpha-card foliage, flat leaf planes, glossy leaves, autumn colors, bare branches.
+```
+
+### Scene Asset 02 — Taihu Standing Stone
+
+Output: `MeshySources/02_Taihu_Standing_Stone.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: one isolated upright Taihu scholar's rock on a low carved stone plinth, stylized game-ready garden asset.
+Subject: a slender vertical weathered limestone monolith roughly three times taller than wide, leaning slightly, with a sinuous S-shaped silhouette, narrow waist, and a modest flare near the top. Deep water erosion creates rounded wrinkled ridges, vertical runnel channels, and five clean asymmetrical through-holes of varying size that daylight visibly passes through. All edges softened and rounded; generous stone thickness around every opening. Mounted on a simple rectangular grey stone base with a plain moulded lip.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single object in slight three-quarter view, whole rock and base visible, generous empty margin; angle clearly reveals the through-holes, depth, and side thickness.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: soft neutral studio lighting, clear silhouette, minimal soft contact shadow.
+Color palette: pale weathered blue-grey limestone with faint restrained ochre staining in deep hollows.
+Materials/textures: matte eroded limestone.
+Constraints: exactly one coherent connected solid; four to six true through-holes; stable flat plinth; no terrain, plants, moss, labels, dimensions, logo, text, or watermark.
+Avoid: solid boulder without holes, crystal, gemstone, mineral cluster, sharp angular fractures, coral, sponge, cave, thin fragile spikes, rubble pile.
+```
+
+### Scene Asset 03 — Weeping Willow
+
+Output: `MeshySources/03_Weeping_Willow.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: A single stylized weeping willow, game-ready garden asset.
+Subject: Short thick trunk dividing low into three or four heavy leaning limbs, deeply furrowed grey-brown bark. From the limb ends hang twelve to eighteen distinct curtain-like masses of trailing foliage, each modelled as a grouped ribbon strand with real thickness and a tapering pointed tip — solid sculpted volumes, not flat planes. The curtains reach down to about one metre above the ground and swing outward slightly as if in light wind, giving an overall silhouette of a tall dome with a fringed, broken lower edge. Narrow pale willow leaves, muted jade-green with a soft silvery underside.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly, misty desaturated palette, matte surfaces.
+Composition/framing: centered single object in slight three-quarter view, whole tree visible, upright, generous empty margin, flat base.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: neutral soft studio lighting, clear silhouette, minimal soft contact shadow.
+Constraints: exactly one complete tree; sculpted foliage with real thickness; no terrain base, water, grass, people, text, logo, or watermark.
+Avoid: alpha-card foliage, flat leaf planes, palm tree, birch, bare branches, autumn yellow, saturated spring green, glossy leaves.
+```
+
+### Scene Asset 04 — Rockery Cluster
+
+Output: `MeshySources/04_Rockery_Cluster.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: A low cluster of five to seven weathered Taihu garden rocks grouped as one connected asset, stylized and game-ready.
+Subject: Rocks of graded sizes leaning against and overlapping one another to form a single wide low horizontal mass roughly three metres across and just over one metre tall, with the largest stone set off-centre. Same water-eroded language as a scholar's rock: rounded wrinkled ridges, shallow runnelled channels, two or three small true through-holes, every edge softened. Pale weathered blue-grey limestone with faint ochre staining in the hollows, matte. Flat underside so it beds into ground. One coherent connected object.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single group in slight three-quarter view showing front and side depth, whole object visible, generous empty margin.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: neutral soft studio lighting, clear silhouette, minimal soft contact shadow.
+Constraints: exactly one connected rock group; five to seven rocks; low horizontal silhouette; flat underside; no terrain plane, moss, grass, water, people, text, logo, or watermark.
+Avoid: sharp angular scree, gravel, brick, rubble, debris, crystal, coral.
+```
+
+### Scene Asset 05 — Flowering Shrub Clump
+
+Output: `MeshySources/05_Flowering_Shrub_Clump.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: A single low ornamental garden shrub clump, stylized and game-ready.
+Subject: A broad rounded mound about one and a half metres wide and under a metre tall, built from six to nine sculpted foliage lobes with faceted solid surfaces and clear separation between them. Small oval leaves, muted jade-green with a dusty desaturated cast. Scattered across the surface a restrained sprinkling of small simple five-petal blossoms in warm ivory and faded pale vermilion — no more than twenty visible, tucked among the leaves rather than covering the mound. A few short woody stems visible at the base. Flat underside. Matte throughout.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single object in slight three-quarter view, whole shrub visible, generous empty margin.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: neutral soft studio lighting, clear silhouette, minimal soft contact shadow.
+Constraints: exactly one shrub clump; six to nine solid foliage lobes; no more than twenty flowers; flat underside; no pot, planter, terrain, grass plane, mulch, people, text, logo, or watermark.
+Avoid: alpha-card foliage, flat leaf planes, saturated pink or magenta flowers, rose bush, hydrangea, topiary ball.
+```
+
+### Scene Asset 06 — Bamboo Clump
+
+Output: `MeshySources/06_Bamboo_Clump.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: A clump of stylized living garden bamboo, game-ready.
+Subject: Fifteen to twenty slender living bamboo culms of varying height between two and three and a half metres, rising from a tight common base and splaying slightly outward. Every culm continues naturally to a narrow tapered living tip. Each culm is a smooth tapering cylinder with clearly visible raised nodes at regular intervals and a faint groove between them. Sparse foliage is confined to the upper third: small groups of narrow lance-shaped leaves in flat fan-like sprays on short side branches. Culms are pale desaturated jade with a faint grey bloom near the nodes; leaves are a slightly deeper muted green. Matte throughout. Flat underside.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single group in slight three-quarter view, whole bamboo clump visible from flat base to every natural tapered tip, generous empty margin.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: neutral soft studio lighting, clear silhouette, minimal soft contact shadow.
+Constraints: exactly one connected clump; fifteen to twenty living culms; every culm has an intact tapered natural tip; sparse upper-third foliage; flat underside; no terrain base, grass plane, fence, people, text, logo, or watermark.
+Avoid: cut bamboo, chopped poles, flat cut ends, truncated culms, bamboo lumber, tropical bamboo forest, thick timber bamboo, saturated green, glossy stems, panda.
+```
+
+### Scene Asset 07 — Water-Edge Clump
+
+Output: `MeshySources/07_Water_Edge_Clump.png`
+
+```text
+Use case: stylized-concept
+Asset type: clean single-object source image for Meshy Image-to-3D
+Primary request: A clump of lakeside water plants for a garden pond edge, stylized and game-ready.
+Subject: One connected asset combining two elements: a group of six to nine round lotus leaves on upright stems, each leaf a shallow dish with a slightly wavy rim and a visible central dimple, held at staggered heights between twenty and sixty centimetres; and behind them a fan of twenty to thirty slender upright reed blades of varying height up to about eighty centimetres, tapering to points and bending gently outward. Two closed lotus buds on tall stems. Muted jade and grey-green, dusty and desaturated, matte. Flat underside.
+Style/medium: clean stylized-realistic 3D asset render, low-poly-friendly production concept.
+Composition/framing: centered single connected group in slight three-quarter view, whole object visible, generous empty margin.
+Scene/backdrop: perfectly plain light neutral gray studio background.
+Lighting/mood: neutral soft studio lighting, clear silhouette, minimal soft contact shadow.
+Constraints: exactly one connected clump; six to nine lotus leaves; twenty to thirty reeds; exactly two closed lotus buds; no open lotus flowers, water plane, pond base, mud, koi, frogs, people, text, logo, or watermark.
+Avoid: pink blossom, cattail heads, tropical foliage, saturated green, glossy wet surfaces.
+```
